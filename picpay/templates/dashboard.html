@@ -1,0 +1,17 @@
+<!-- transacoes/templates/transacao.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transação</title>
+</head>
+<body>
+    <p>Saldo da Carteira: R$ {{ saldo_carteira }}</p>
+    <h2>Realizar Transação</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Realizar Transação</button>
+    </form>
+</body>
+</html>
